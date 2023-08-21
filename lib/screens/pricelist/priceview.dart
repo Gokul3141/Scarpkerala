@@ -6,7 +6,11 @@ class Price extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
-    );
+        body: Center(
+      child: Text(
+        "Price screen",
+        style: TextStyle(fontSize: 15),
+      ),
+    ));
   }
 }

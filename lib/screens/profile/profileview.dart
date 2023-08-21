@@ -6,7 +6,8 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
+        body: Center(
+        child: Text("Profile screen",style: TextStyle(fontSize: 15),),),
     );
   }
 }
