@@ -23,8 +23,8 @@ class Bottombar extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: Colors.white10,
-      body: Obx(
+      body: Obx(() => tabs[bottomcontol.tabindex.value]),
+      bottomNavigationBar: Obx(
         () => Stack(
           children: [
             Obx(() => tabs[bottomcontol.tabindex.value]),
@@ -34,26 +34,28 @@ class Bottombar extends StatelessWidget {
               right: 0,
               bottom: 0, // Set the bottom to 0 to place it at the bottom
               child: BottomNavigationBar(
+                unselectedItemColor: Colors.cyan,
                 showUnselectedLabels: false,
                 type: BottomNavigationBarType.fixed,
                 items: <BottomNavigationBarItem>[
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.home, color: Colors.lightGreenAccent[700]),
+                    icon: Icon(Icons.home, color: Colors.white),
                     label: 'Home',
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.price_change_outlined, color: Colors.lightGreenAccent[700]),
+                    icon:
+                        Icon(Icons.price_change_outlined, color: Colors.white),
                     label: 'price list',
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.add_shopping_cart_outlined,
-                        color: Colors.lightGreenAccent[700]),
+                        color: Colors.white),
                     label: 'Cart',
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(
                       Icons.person,
-                      color: Colors.lightGreenAccent[700],
+                      color: Colors.white,
                     ),
                     label: 'Profile',
                   ),
@@ -64,36 +66,10 @@ class Bottombar extends StatelessWidget {
                 onTap: bottomcontol.TapBottom,
               ),
             ),
-            Positioned(
-              top: -0,
-              left: 3,
-              right: 0,
-              bottom: -700, // Adjust this value as needed
-              child: Center(
-                child: Container(
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                          strokeAlign: StrokeAlign.center,
-                          width: 3,
-                          color: Colors.black),
-                      color: Colors.white),
-                  child: IconButton(
-                    onPressed: () {
-                      // Add your button's functionality here
-                    },
-                    icon: Icon(
-                      Icons.ice_skating_rounded,
-                      color: Colors.black,
-                    ),
-                    iconSize: 25, // Adjust the size as needed
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       ),
+      backgroundColor: Colors.white10,
     );
   }
 }
