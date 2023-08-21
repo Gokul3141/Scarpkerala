@@ -34,7 +34,6 @@ class Bottombar extends StatelessWidget {
               right: 0,
               bottom: 0, // Set the bottom to 0 to place it at the bottom
               child: BottomNavigationBar(
-
                 showUnselectedLabels: false,
                 type: BottomNavigationBarType.fixed,
                 items: <BottomNavigationBarItem>[
