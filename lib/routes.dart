@@ -10,8 +10,8 @@ class AppRoutes {
   static String otpscrn="/otpscreen";
   static String homemscreen = "/bottomscreen";
   static String cartscrn = "/cart";
-  static String profilescrn = "/bottomscreen";
-  static String pricescn = "/bottomscreen";
+  static String profilescrn = "/profile";
+  static String pricescn = "/price";
   static String homescn = "/bottomscreen";
 
 
