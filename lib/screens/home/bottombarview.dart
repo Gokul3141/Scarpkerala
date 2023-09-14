@@ -62,7 +62,7 @@ class Bottombar extends StatelessWidget {
         decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: Border.all(
-                strokeAlign: StrokeAlign.center,
+               // strokeAlign: StrokeAlign.center,
                 width: 3,
                 color: Colors.black),
             color: Colors.white),
@@ -77,7 +77,7 @@ class Bottombar extends StatelessWidget {
           backgroundColor: Colors.white,
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
