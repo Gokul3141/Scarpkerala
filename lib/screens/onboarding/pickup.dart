@@ -34,7 +34,7 @@ class PickupBoarding extends StatelessWidget {
                       bottomRight: Radius.zero,
 
                     ),
-                  color: Colors.green.shade200,
+                  color: Colors.green.shade400,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(top: 20),
