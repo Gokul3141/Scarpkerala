@@ -3,9 +3,11 @@ import 'package:get/get.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:scarpkerala/colorui.dart';
 import 'package:scarpkerala/routes.dart';
+import 'package:scarpkerala/screens/home/homecontroller.dart';
 
 class Home extends StatelessWidget {
   Home({Key? key}) : super(key: key);
+  final homecontroll =Get.put(Homemcontroller());
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +52,10 @@ class Home extends StatelessWidget {
                       ),
                       IconButton(
                           splashColor: Colors.white,
-                          onPressed: () {},
+                          onPressed: () {
+                            homecontroll.openWhatsApp("9544204366", "hello");
+                            
+                          },
                           icon: Icon(
                             Icons.call_outlined,
                             color: secondarycolor,
