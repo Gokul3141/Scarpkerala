@@ -156,6 +156,7 @@ class Profile extends StatelessWidget {
    void ProfileImageBottumsheet(BuildContext context) {
      showModalBottomSheet(
          backgroundColor: secondarycolor,
+
          context: context,
          shape: RoundedRectangleBorder(
              borderRadius: BorderRadius.only(
@@ -204,7 +205,7 @@ class Profile extends StatelessWidget {
        context: context,
        builder: (BuildContext context) {
          return AlertDialog(
-           backgroundColor: primarycolor,
+           backgroundColor: Colors.green,
            title: Text("Edit Profile"),
            content: Column(
              mainAxisSize: MainAxisSize.min,
@@ -224,7 +225,7 @@ class Profile extends StatelessWidget {
                onPressed: () {
                  Get.back();
                },
-               child: Text("Cancel",style: TextStyle(color: thridcolor),),
+               child: Text("Cancel",style: TextStyle(color: Colors.black),),
              ),
              TextButton(
                onPressed: () {
@@ -237,7 +238,7 @@ class Profile extends StatelessWidget {
 
                  Get.back();// Close the dialog
                },
-               child: Text("Save",style: TextStyle(color:thridcolor),),
+               child: Text("Save",style: TextStyle(color: Colors.black),),
              ),
            ],
          );
