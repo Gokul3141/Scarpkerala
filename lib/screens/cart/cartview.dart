@@ -9,7 +9,7 @@ class Cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:CartPageUI(cartController: cartController),
+      body:CartPageUI(cartController:  cartController),
     );
   }
 }
@@ -59,7 +59,7 @@ class CartPageUI extends StatelessWidget {
               imageUrl: "assets/product2.jpg",
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 60,vertical: 70),
+              padding: EdgeInsets.symmetric(horizontal: 60,vertical: 48),
               child: ElevatedButton(
 
                 style: ElevatedButton.styleFrom(primary:Colors.green,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))),
