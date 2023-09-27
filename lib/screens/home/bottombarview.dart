@@ -13,7 +13,7 @@ class Bottombar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var bottomcontol = Get.put(Bottomcontroller());
+    var bottomcontol = Get.put(Homemcontroller());
 
     final List<Widget> tabs = [
       Home(),
