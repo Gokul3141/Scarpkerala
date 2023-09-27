@@ -18,7 +18,7 @@ class Bottombar extends StatelessWidget {
     final List<Widget> tabs = [
       Home(),
       Price(),
-      PickupBoarding(),
+      const PickupBoarding(),
       Profile(),
     ];
 
@@ -29,7 +29,7 @@ class Bottombar extends StatelessWidget {
           unselectedItemColor: Colors.cyan,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,
-          items: <BottomNavigationBarItem>[
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.home, color: Colors.white),
               label: 'Home',
@@ -73,12 +73,12 @@ class Bottombar extends StatelessWidget {
         child: FloatingActionButton(
           splashColor: Colors.transparent,
           onPressed: () {},
-          child: Icon(
+          backgroundColor: Colors.white,
+          child: const Icon(
             Icons.camera_alt,
             size: 30,
             color: Colors.black,
           ),
-          backgroundColor: Colors.white,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

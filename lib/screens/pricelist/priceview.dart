@@ -14,13 +14,13 @@ class Price extends StatelessWidget {
         children: [
           Container(
             alignment: Alignment.topLeft,
-            padding: const EdgeInsets.only(left: 15, top: 35, bottom: 10),
+            padding: const EdgeInsets.only(left: 20, top: 45, bottom: 10),
             child: GestureDetector(
               onTap: () {
                 Get.back();
               },
               child: Image.asset(
-                'images/return.png',
+                'assets/return.png',
                 width: 40,
                 height: 40,
               ),
@@ -45,7 +45,7 @@ class Price extends StatelessWidget {
                     physics: const ScrollPhysics(),
                     scrollDirection: Axis.vertical,
                     gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
+                    const SliverGridDelegateWithFixedCrossAxisCount(
                       mainAxisSpacing: 25,
                       crossAxisSpacing: 30,
                       mainAxisExtent: 160,
@@ -74,48 +74,12 @@ class Price extends StatelessWidget {
                                   scale: 8,
                                 ),
                               ),
-                           ),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              color: Colors.transparent,
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                // Use EdgeInsets.all for consistent padding
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "News Paper",
-                                      style: TextStyle(
-                                        color: Colors.grey[600],
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 8),
-                                     Row(
-                                      children: [
-                                        Text(
-                                          '\u20B925',
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-
                               Text(
                                 "Paper",
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: Colors.black,
                                   fontWeight: FontWeight.w400,
-
                                 ),
                               ),
                               Text(
@@ -140,7 +104,7 @@ class Price extends StatelessWidget {
                     },
                     style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.green),
+                      MaterialStateProperty.all<Color>(Colors.green),
                     ),
                     child: const Text(
                       "Add to Cart",
