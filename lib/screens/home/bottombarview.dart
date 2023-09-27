@@ -13,7 +13,7 @@ class Bottombar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var bottomcontol = Get.put(Bottomcontroller());
+    var bottomcontol = Get.put(Homemcontroller());
 
     final List<Widget> tabs = [
       Home(),
@@ -25,7 +25,7 @@ class Bottombar extends StatelessWidget {
     return Scaffold(
       body: Obx(() => tabs[bottomcontol.tabindex.value]),
       bottomNavigationBar: Obx(
-        () => BottomNavigationBar(
+            () => BottomNavigationBar(
           unselectedItemColor: Colors.cyan,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,
@@ -62,7 +62,11 @@ class Bottombar extends StatelessWidget {
         decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: Border.all(
+
                 //strokeAlign: StrokeAlign.center,
+
+              //  strokeAlign: StrokeAlign.center,
+
                 width: 3,
                 color: Colors.black),
             color: Colors.white),
