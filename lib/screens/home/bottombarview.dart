@@ -25,7 +25,7 @@ class Bottombar extends StatelessWidget {
     return Scaffold(
       body: Obx(() => tabs[bottomcontol.tabindex.value]),
       bottomNavigationBar: Obx(
-        () => BottomNavigationBar(
+            () => BottomNavigationBar(
           unselectedItemColor: Colors.cyan,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,

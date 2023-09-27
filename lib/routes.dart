@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+
 import 'package:scarpkerala/screens/cart/cartview.dart';
 import 'package:scarpkerala/screens/home/bottombarview.dart';
 import 'package:scarpkerala/screens/home/homeview.dart';

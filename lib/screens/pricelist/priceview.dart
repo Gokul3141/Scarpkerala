@@ -74,12 +74,48 @@ class Price extends StatelessWidget {
                                   scale: 8,
                                 ),
                               ),
+                           ),
+                          ),
+                          Expanded(
+                            flex: 1,
+                            child: Container(
+                              color: Colors.transparent,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                // Use EdgeInsets.all for consistent padding
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "News Paper",
+                                      style: TextStyle(
+                                        color: Colors.grey[600],
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 8),
+                                     Row(
+                                      children: [
+                                        Text(
+                                          '\u20B925',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+
                               Text(
                                 "Paper",
                                 style: TextStyle(
                                   fontSize: 16,
                                   color: Colors.black,
                                   fontWeight: FontWeight.w400,
+
                                 ),
                               ),
                               Text(
