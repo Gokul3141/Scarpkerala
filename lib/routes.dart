@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:scarpkerala/screens/cart/cartview.dart';
 import 'package:scarpkerala/screens/home/bottombarview.dart';
 import 'package:scarpkerala/screens/home/homeview.dart';
+import 'package:scarpkerala/screens/onboarding/pickup.dart';
 import 'package:scarpkerala/screens/loginscereeen/otpscreen.dart';
 import 'package:scarpkerala/screens/pricelist/priceview.dart';
 import 'package:scarpkerala/screens/profile/profileview.dart';
@@ -22,7 +23,7 @@ class AppRoutes {
   static List<GetPage> page = [
     GetPage(name: otpscrn, page: ()=>PhoneNumberScreen()),
     GetPage(name: homemscreen, page: () => Bottombar()),
-    GetPage(name: cartscrn, page: () => Cart()),
+    GetPage(name: cartscrn, page: () => PickupBoarding()),
     GetPage(name: profilescrn, page: () => Profile()),
     GetPage(name: pricescn, page: () => Price()),
     GetPage(name: homescn, page: () => Home()),
