@@ -13,7 +13,7 @@ class PhoneNumberScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 80,
             ),
             Text(
@@ -23,14 +23,14 @@ class PhoneNumberScreen extends StatelessWidget {
                   fontSize: 25,
                   fontStyle: FontStyle.italic),
             ),
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
-            Text(
+            const Text(
               "Type Your Mobile number",
               style: TextStyle(color: Colors.black, fontSize: 17),
             ),
-            SizedBox(
+            const SizedBox(
               height: 80,
             ),
             Padding(
@@ -40,7 +40,7 @@ class PhoneNumberScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.grey[500]),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             // Grey Outlined TextField
@@ -54,7 +54,7 @@ class PhoneNumberScreen extends StatelessWidget {
                 controller: phoneNumberController,
                 maxLength: 10,
                 keyboardType: TextInputType.phone,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: "Enter your number",
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.symmetric(
@@ -62,7 +62,7 @@ class PhoneNumberScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -77,7 +77,7 @@ class PhoneNumberScreen extends StatelessWidget {
                         borderRadius:
                             BorderRadius.circular(10)), // Circular shape
                   ),
-                  child: Text('Skip', style: TextStyle(color: Colors.black)),
+                  child: const Text('Skip', style: TextStyle(color: Colors.black)),
                 ),
                 // Circular Shaped Button 2
                 ElevatedButton(
@@ -92,7 +92,7 @@ class PhoneNumberScreen extends StatelessWidget {
                             BorderRadius.circular(10)), // Circular shape
                   ),
                   child:
-                      Text('Send OTP', style: TextStyle(color: Colors.black)),
+                      const Text('Send OTP', style: TextStyle(color: Colors.black)),
                 ),
               ],
             ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scarpkerala/screens/home/homecontroller.dart';
+import 'package:scarpkerala/screens/onboarding/pickup.dart';
 
-import '../../colorui.dart';
 import '../cart/cartview.dart';
 import '../pricelist/priceview.dart';
 import '../profile/profileview.dart';
@@ -13,12 +13,12 @@ class Bottombar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var bottomcontol = Get.put(Bottomcontroller());
+    var bottomcontol = Get.put(Homemcontroller());
 
     final List<Widget> tabs = [
       Home(),
       Price(),
-      Cart(),
+      const PickupBoarding(),
       Profile(),
     ];
 
@@ -29,7 +29,7 @@ class Bottombar extends StatelessWidget {
           unselectedItemColor: Colors.cyan,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,
-          items: <BottomNavigationBarItem>[
+          items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.home, color: Colors.white),
               label: 'Home',
@@ -62,19 +62,23 @@ class Bottombar extends StatelessWidget {
         decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: Border.all(
+
+                //strokeAlign: StrokeAlign.center,
+
               //  strokeAlign: StrokeAlign.center,
+
                 width: 3,
                 color: Colors.black),
             color: Colors.white),
         child: FloatingActionButton(
           splashColor: Colors.transparent,
           onPressed: () {},
-          child: Icon(
+          backgroundColor: Colors.white,
+          child: const Icon(
             Icons.camera_alt,
             size: 30,
             color: Colors.black,
           ),
-          backgroundColor: Colors.white,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

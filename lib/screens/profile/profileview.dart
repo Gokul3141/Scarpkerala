@@ -27,83 +27,96 @@ class Profile extends StatelessWidget {
                  mainAxisAlignment: MainAxisAlignment.start,
                  crossAxisAlignment: CrossAxisAlignment.start,
                  children: [
-                   IconButton(
-                     icon: Icon(Icons.arrow_back),
-                     onPressed: () {
-                       // Handle back button press
-                     },
+                   Container(
+                     alignment: Alignment.topLeft,
+                     padding: const EdgeInsets.only(left:1, top: 15, bottom: 10),
+                     child: GestureDetector(
+                       onTap: () {
+                         Get.back();
+                       },
+                       child: Image.asset(
+                         'assets/return.png',
+                         width: 40,
+                         height: 40,
+                       ),
+                     ),
                    ),
-                   Row(
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                     children: [
 
-                       GestureDetector(
-                         onTap: () {
-                           ProfileImageBottumsheet(context);
-                         },
-                         child: CircleAvatar(
-                           backgroundImage: NetworkImage(
-                               'https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/short/linkedin-profile-picture-maker/dummy_image/thumb/004.webp'),
-                           radius: 40.0,
-                         ),
-                       ),
 
-                       SizedBox(width: 16.0),
-                       Padding(
-                         padding: const EdgeInsets.all(8.0),
-                         child: Column(
-                           crossAxisAlignment: CrossAxisAlignment.start,
-                           children: [
-                             Title(
-                                 color: Colors.greenAccent,
-                                 child: Text(
-                                   'Profile',
-                                   style: TextStyle(
-                                       fontSize: 20.0,
-                                       fontWeight: FontWeight.bold),
-                                 )),
-                             SizedBox(
-                               height: 20,
-                             ),
-                             Text(
-                               'Your Name',
-                               style: TextStyle(
-                                 fontSize: 18.0,
-                                 fontWeight: FontWeight.w400,
-                               ),
-                             ),
-                             Text(
-                               'Your Number',
-                               style: TextStyle(
-                                 fontSize: 16.0,
-                               ),
-                             ),
-                           ],
-                         ),
-                       ),
-                       Spacer(),
-                       Column(
+
+
+                       Row(
+                         crossAxisAlignment: CrossAxisAlignment.start,
                          children: [
-                           TextButton.icon(
-                               onPressed: () {
-                                 ShowDialog(context);
-                               },
-                               icon: Icon(
-                                 Icons.edit,
-                                 color: thridcolor,
-                               ),
-                               label: Text(
-                                 'Edit',
-                                 style: TextStyle(
-                                     fontWeight: FontWeight.bold,
-                                     color: thridcolor),
-                               )),
+
+                           GestureDetector(
+                             onTap: () {
+                               ProfileImageBottumsheet(context);
+                             },
+                             child: CircleAvatar(
+                               backgroundImage: NetworkImage(
+                                   'https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/short/linkedin-profile-picture-maker/dummy_image/thumb/004.webp'),
+                               radius: 40.0,
+                             ),
+                           ),
+
+                           SizedBox(width: 16.0),
+                           Padding(
+                             padding: const EdgeInsets.all(8.0),
+                             child: Column(
+                               crossAxisAlignment: CrossAxisAlignment.start,
+                               children: [
+                                 Title(
+                                     color: Colors.greenAccent,
+                                     child: Text(
+                                       'Profile',
+                                       style: TextStyle(
+                                           fontSize: 20.0,
+                                           fontWeight: FontWeight.bold),
+                                     )),
+                                 SizedBox(
+                                   height: 20,
+                                 ),
+                                 Text(
+                                   'Your Name',
+                                   style: TextStyle(
+                                     fontSize: 18.0,
+                                     fontWeight: FontWeight.w400,
+                                   ),
+                                 ),
+                                 Text(
+                                   'Your Number',
+                                   style: TextStyle(
+                                     fontSize: 16.0,
+                                   ),
+                                 ),
+                               ],
+                             ),
+                           ),
+                           Spacer(),
+                           Column(
+                             children: [
+                               TextButton.icon(
+                                   onPressed: () {
+                                     ShowDialog(context);
+                                   },
+                                   icon: Icon(
+                                     Icons.edit,
+                                     color: thridcolor,
+                                   ),
+                                   label: Text(
+                                     'Edit',
+                                     style: TextStyle(
+                                         fontWeight: FontWeight.bold,
+                                         color: thridcolor),
+                                   )),
+                             ],
+                           ),
                          ],
                        ),
                      ],
                    ),
-                 ]),
-           ),
+     ),
            Expanded(
              child: Padding(
                padding: const EdgeInsets.all(8.0),
@@ -148,9 +161,10 @@ class Profile extends StatelessWidget {
                ),
              ),
            ),
-         ],
-       ),
-     );
+     ],
+       ));
+
+
    }
 
    void ProfileImageBottumsheet(BuildContext context) {
@@ -205,7 +219,7 @@ class Profile extends StatelessWidget {
        context: context,
        builder: (BuildContext context) {
          return AlertDialog(
-           backgroundColor: Colors.green,
+           backgroundColor: secondarycolor,
            title: Text("Edit Profile"),
            content: Column(
              mainAxisSize: MainAxisSize.min,
