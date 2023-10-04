@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scarpkerala/screens/home/homecontroller.dart';
-import 'package:scarpkerala/screens/onboarding/pickup.dart';
-
 import '../cart/cartview.dart';
 import '../pricelist/priceview.dart';
 import '../profile/profileview.dart';
@@ -18,7 +16,7 @@ class Bottombar extends StatelessWidget {
     final List<Widget> tabs = [
       Home(),
       Price(),
-      const PickupBoarding(),
+      Cart(),
       Profile(),
     ];
 
