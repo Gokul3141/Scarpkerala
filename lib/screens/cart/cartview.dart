@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:scarpkerala/routes.dart';
 
 import 'cartconteroller.dart';
 
@@ -80,7 +81,7 @@ class CartPageUI extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15))),
                 onPressed: () {
-                  // Continue button logic
+                  Get.toNamed(AppRoutes.weigt);
                 },
                 child: const Text(
                   "Continue",
